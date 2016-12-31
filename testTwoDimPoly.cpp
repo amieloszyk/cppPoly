@@ -79,6 +79,11 @@ int main() {
     std::cout << "Known: f(2, 4) * 6.0 = " << (6.0 + 12.0*2.0) + (-3.0 + 27.0*pow(2.0,2.0))*4.0 + (60.0*2.0 + 15.0*pow(2.0,2.0))*pow(4.0,2.0) << std::endl;
     std::cout << "Calculated: f(2, 4) * 6.0 = " << testScalarMultVal << std::endl << std::endl; 
 
+    double testIntegralVal = testPoly.findIntegralOverRange(3.0, 4.0, 1.0, 2.0);
+    std::cout << "Test Case: integral(integral(f(x,y),x,3,4),y,1,2)" << std::endl;
+    std::cout << "Known Value: 244.1111" << std::endl;
+    std::cout << "Calculated: " << testIntegralVal << std::endl << std::endl;
+
     // Debuggin the last test -- make a standard printing option
     //std::vector<OneDimPoly> varTwoArray = testAddPoly.getVarOneArray();
     //int varTwoOrder = testAddPoly.getVarTwoOrder();
